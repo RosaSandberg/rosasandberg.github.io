@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+
+    
+
+    
+    <title>Town and Towers</title>
+</head>
+
+<body>
+
+    <nav>
+        <div><a href="#"><img viewbox = "0 0 512 512" src="images/townandtowerslogo.svg" alt=""></a></div>
+        
+
+        <ul>
+            <a href="https://open.spotify.com/user/5x45wism3yh5u4juozazs4cf7" id ="socialmediaicon" target=”_blank”><img src="images/spotify-negative-icon.png" alt="spotifyicon"></a>
+       
+            <a href="https://www.youtube.com/@townandtowersrecords758"id ="socialmediaicon" target=”_blank”><img src="images/youtube-negative-icon.png" alt="youtubeicon"></a>
+            
+            <a href="https://www.facebook.com/townandtowers.dk" id ="socialmediaicon"target=”_blank”><img src="images/facebook-negative-icon.png" alt="facebookicon"></a>
+          
+            <a href="https://www.instagram.com/town_and_towers_records/" id ="socialmediaicon"target=”_blank”><img src="images/instagram-negative-icon.png" alt="instagramicon"></a>
+        </ul>
+
+
+    </nav> 
+    
+
+    <div class="prepage-wrapper" id="prepage-wrapper-id">
+        <div class="prepage" id ="prepage">
+            
+            <img style="max-width: 12rem;" src="images/townandtowerslogotype.svg" alt="" srcset="">
+            <p class="letterspacing-1">Record Label and Music Management</p>
+            
+            
+            <p class="bold" class="letterspacing-1">SPIN THROUGH A SELECTION <br> OF OUR MOST POPULAR ARTISTS</p>
+            <button class="button-1" onclick="startPlay()">START</button>
+        
+
+            
+            
+        </div>
+    </div>
+
+    
+
+    <div class="mainpage" id="mainpage">
+        
+
+    
+
+
+        <div class="bottom-container">
+            <div class="vinyl-wrapper" id="vinylwrapper" onclick="cycleSongs()">
+                <img class= "rotating" src="images/vinylcutout.png" id="vinylimage" alt="">
+            </div>
+            
+            <p id="playing" style="display: none" class="letterspacing-1"> <span class="bold"> NOW PLAYING: </span> <span id="songtitle">NOTHING</span> </p>
+            <button class="button-1" onclick="cycleSongs()"> SPIN?</button>
+            <a class="logotype-wrapper">
+                <img src="images/townandtowerslogotype.svg" alt="townsandtowerslogotype">
+            </a>
+            <p class="letterspacing-1">Record Label and Music Management</p>
+        </div>
+    
+        
+     
+        <div id="container">
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
+
+
+
+    <div class="video-container">
+        <video muted autoplay loop class="video" style="" id="videotrackeffect1">
+            <source src="video/vhseffect-2.mp4" type="video/mp4">
+        </video>
+    
+    
+        <video muted autoplay loop class="video" id="videotrackeffect2">
+            <source src="video/vhseffect.mp4" type="video/mp4">
+        </video>
+    
+        <video muted loop  id="videotrackmusicvideo">
+            <source src="video/dancing.mp4" type="video/mp4" id="videotrackmusicvideosource">
+        </video>
+    </div>
+    
+    <audio loop controls id="songtrack" src="audio/116-bpm-oldschool-electronica-18063.mp3">
+     
+
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio loop id="taperecorder" >
+        <source src="retrowave.ogg" type="audio/ogg">
+        <source src="audio/projecter.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio loop id="vinylaudio">
+        <source src="retrowave.ogg" type="audio/ogg">
+        <source src="audio/vinyl-effect-loop-110210.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+   
+   
+
+
+   
+    
+
+    
+    
+</body>
+<script src="js/grain.js" type="text/javascript"></script>
+<script src="js/randomsong.js"></script>
+<script src="js/setvolume.js"></script>
+<script src="js/start.js"></script>
+<script src="js/changesong.js"></script>
+
+</html>
