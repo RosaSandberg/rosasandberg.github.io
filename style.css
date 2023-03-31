@@ -6,6 +6,20 @@
     list-style-type: none;
 }
 
+html, body 
+{
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#container 
+{
+    overflow: hidden;
+}
+
 
 body {
     background-color: white;
@@ -222,7 +236,8 @@ intropageoverlay div img
 {
     transition: all 2s ease;
     transition-delay: 2s;
-    scale: 1.2!important;
+    transform: scale(1.2);
+
 }
 
 
@@ -244,7 +259,7 @@ intropageoverlay div img
 .bottom-container 
 {
 
-    
+    height: 100vh;
     width: 100%;
     text-align: center;
     position: absolute;
@@ -254,7 +269,6 @@ intropageoverlay div img
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
     
 }
 
@@ -316,7 +330,8 @@ intropageoverlay div img
 .bottom-container .button-1:hover 
 {
     transition: all ease 0.2s;
-    scale: 1.05;
+    transform: scale(1.05);
+ 
     
 }
 
@@ -424,20 +439,7 @@ audio {height: 0; width: 0;}
   }
 
 
-  @keyframes videozoom {
-    from 
-    {
-        min-width: 100%; 
-        min-height: 100%; 
-    }
 
-    to 
-    {
-        min-width: 300%; 
-        min-height: 300%; 
-    }
-    
-  }
 
 
   @keyframes rotating {
@@ -483,7 +485,7 @@ audio {height: 0; width: 0;}
 .vinyl-wrapper img 
 {
     flex-shrink: 4;
-    scale: 0.8;
+    transform: scale(0.8);
     z-index: 1;
     
 
@@ -493,7 +495,8 @@ audio {height: 0; width: 0;}
 .vinyl-wrapper:hover 
 {
     transition: all 1s ease;
-    scale: 1.06;
+    transform: scale(1.06);
+
 }
 
 
@@ -555,3 +558,35 @@ audio {height: 0; width: 0;}
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+
+@media only screen and (max-width: 800px) {
+
+    html 
+    {
+        font-size: 60%;
+    }
+    .vinyl-wrapper img 
+    {
+        width: unset;
+        max-width: 80%;
+    }
+    .logotype-wrapper 
+    {
+        width: 40%;
+    }
+
+    .bottom-container 
+    {
+        padding-left: 10%;
+        padding-right: 10%;
+
+
+    }
+
+    .button-1 
+    {
+
+    }
+  }
