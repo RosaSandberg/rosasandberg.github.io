@@ -150,6 +150,16 @@ nav ul a img
     padding-bottom: 1rem;
 }
 
+.prepage a:nth-child(5)
+{
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}
+
+
 
 .prepage button 
 {
