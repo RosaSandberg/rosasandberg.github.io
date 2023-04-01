@@ -445,18 +445,18 @@ audio {height: 0; width: 0;}
   }
   .video-container > video:nth-child(1) 
   {
-    opacity: 0.05; filter: brightness(3);
+    opacity: 0.025; filter: brightness(3);
   }
   .video-container > video:nth-child(2) 
   {
-    opacity:0.02;
+    opacity:0.01;
   }
 
   .video-container > video:nth-child(3) 
   {
     z-index: -1;
-    opacity: 0.6;
-    filter: contrast(1.25) grayscale(0.6) blur(0.1rem); 
+    opacity: 0.5;
+    filter: contrast(1.1) grayscale(0.9); 
     /*animation: videozoom;
     animation-duration: 300s;*/
     
