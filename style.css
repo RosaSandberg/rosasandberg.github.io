@@ -1,6 +1,8 @@
+
 *
 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -26,10 +28,6 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
-.app 
-{
-    z-index: 1000;
-}
 
 .bold 
 {
@@ -46,14 +44,23 @@ body {
 nav 
 {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 0;
     left: 0;
     width: 100vw;
     width: 100svw;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     padding: 2rem;
     z-index: 9999;
@@ -62,14 +69,10 @@ nav
 }
 
 
-
-nav div 
-{
-
-}
-
 nav > div:nth-child(1) a > img
 {
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     scale: inherit;
     width: 4rem;
@@ -77,6 +80,8 @@ nav > div:nth-child(1) a > img
 
 nav > div:nth-child(1) a > img:hover 
 {
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     scale: 1.1;
 }
@@ -93,11 +98,15 @@ nav ul a
 }
 nav ul a img:hover 
 {
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     scale: 1.1;
 }
 nav ul a img 
 {
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     scale: inherit;
     width: 2rem;
@@ -111,7 +120,8 @@ nav ul a img
 .mainpage 
 {
     animation-direction: reverse!important;
-    animation-fill-mode: forwards!important;
+    -webkit-animation-fill-mode: forwards!important;
+            animation-fill-mode: forwards!important;
 }
 
 .prepage-wrapper 
@@ -128,14 +138,22 @@ nav ul a img
 
 .prepage 
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 
     top: 50%;
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     position: relative;
 
 }
@@ -191,9 +209,12 @@ nav ul a img
 
 .intropageoverlay 
 {
-    animation: fade;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+    -webkit-animation: fade;
+            animation: fade;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     opacity: 100%;
     position: absolute;
     width: 100vw;
@@ -202,7 +223,8 @@ nav ul a img
     height: 100vhs;
     z-index: 2;
     background-color: white;
-    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
     pointer-events: none;
 
 
@@ -230,10 +252,19 @@ intropageoverlay div img
 
 .fade 
 {
-    animation: fade;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+    -webkit-animation: fade;
+            animation: fade;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     opacity: 100%;
+}
+
+@-webkit-keyframes fade 
+{
+    from {opacity: 100%;}
+        to {opacity: 0%; display: none;}
 }
 
 @keyframes fade 
@@ -244,9 +275,15 @@ intropageoverlay div img
 
 .zoom 
 {
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
     transition: all 2s ease;
-    transition-delay: 2s;
-    transform: scale(1.2);
+    -webkit-transition-delay: 2s;
+         -o-transition-delay: 2s;
+            transition-delay: 2s;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 
 }
 
@@ -260,8 +297,15 @@ intropageoverlay div img
     position: absolute;
     top: 0;
     z-index: 200;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 2rem;
 }
@@ -275,9 +319,18 @@ intropageoverlay div img
     position: absolute;
     bottom: 0;
     z-index: 200;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -285,10 +338,6 @@ intropageoverlay div img
 {
     margin-bottom: 10rem;
 
-}
-.bottom-container > div:nth-child(3) 
-{
-    
 }
 
 .bottom-container > div:nth-child(3) > p
@@ -314,18 +363,20 @@ intropageoverlay div img
 
 #songtitle 
 {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
     -webkit-animation-name: blinker;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.1s;
-  animation-timing-function: ease;
-
-  white-space: pre;
-
-
-    
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    white-space: pre;
 }
 
-@-webkit-keyframes blinker {
+@keyframes blinker 
+{
     0% { color: #ffffff; 
           text-shadow: #ffffff 0px 0px 20px;
           }
@@ -356,8 +407,12 @@ intropageoverlay div img
 
 .bottom-container .button-1:hover 
 {
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
  
     
 }
@@ -372,22 +427,10 @@ intropageoverlay div img
 	40% {-webkit-transform: translateY(-15px);}
 	60% {-webkit-transform: translateY(-7px);}
 }
- 
-@-moz-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-	40% {-moz-transform: translateY(-15px);}
-	60% {-moz-transform: translateY(-7px);}
-}
- 
-@-o-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-	40% {-o-transform: translateY(-15px);}
-	60% {-o-transform: translateY(-7px);}
-}
 @keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-15px);}
-	60% {transform: translateY(-7px);}
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+	40% {-webkit-transform: translateY(-15px);transform: translateY(-15px);}
+	60% {-webkit-transform: translateY(-7px);transform: translateY(-7px);}
 }
 
 
@@ -427,89 +470,102 @@ audio {height: 0; width: 0;}
 
   
 
-  .video-container video {
-    /* Make video to at least 100% wide and tall */
+.video-container video 
+{
+/* Make video to at least 100% wide and tall */
     min-width: 100%; 
     min-height: 100%; 
-  
+
     /* Setting width & height to auto prevents the browser from stretching or squishing the video */
     width: auto;
     height: auto;
-  
+
     /* Center the video */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
 
-  }
+}
   .video-container > video:nth-child(1) 
   {
-    opacity: 0.025; filter: brightness(3);
+    opacity: 0.025; -webkit-filter: brightness(3); filter: brightness(3);
   }
   .video-container > video:nth-child(2) 
   {
     opacity:0.01;
   }
-
   .video-container > video:nth-child(3) 
   {
     z-index: -1;
     opacity: 0.5;
-    filter: contrast(1.1) grayscale(0.9); 
-    /*animation: videozoom;
-    animation-duration: 300s;*/
-    
+    -webkit-filter: contrast(1.1) grayscale(0.9);
+            filter: contrast(1.1) grayscale(0.9); 
   }
 
-
-
-
-
-  @keyframes rotating {
+  @-webkit-keyframes rotating {
     from {
       -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
       transform: rotate(0deg);
 
     }
     to {
       -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
       transform: rotate(360deg);
 
     }
   }
-  .rotating {
-    -webkit-animation: rotating 3s linear infinite;
-    -moz-animation: rotating 3s linear infinite;
-    -ms-animation: rotating 3s linear infinite;
-    -o-animation: rotating 3s linear infinite;
-    animation: rotating 3s linear infinite;
-  }
-  
 
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+
+    }
+  }
+.rotating {
+-webkit-animation: rotating 3s linear infinite;
+animation: rotating 3s linear infinite;
+}
+  
 .vinyl-wrapper 
 {
 
     
-    flex-shrink: 2;
+    -ms-flex-negative: 2;
+
+    
+        flex-shrink: 2;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     width: 25rem;
     text-align: center;
     margin-bottom: 5%;
 
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+
+            animation-fill-mode: forwards;
 }
 
 .vinyl-wrapper img 
 {
-    flex-shrink: 4;
-    transform: scale(0.8);
+    -ms-flex-negative: 4;
+        flex-shrink: 4;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
     z-index: 1;
     
 
@@ -519,8 +575,12 @@ audio {height: 0; width: 0;}
 .vinyl-wrapper:hover 
 {
     cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
-    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+            transform: scale(1.06);
 
 }
 
@@ -550,14 +610,20 @@ audio {height: 0; width: 0;}
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
+    -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button-1:hover 
 {
     cursor: pointer;
+    -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 #canvas {
