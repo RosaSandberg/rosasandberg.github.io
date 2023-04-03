@@ -1,5 +1,5 @@
 var taperecorder = document.getElementById("taperecorder");
-taperecorder.volume = 0.1;
+taperecorder.volume = 0.4;
 
 
 

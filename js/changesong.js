@@ -15,17 +15,18 @@ var playingText = document.getElementById("playing");
 const songUrl = [
 
     "audio/songs/falseflagbyenterme.mp3", 
+    "audio/songs/newnarcissimbyeckotrigger.mp3",
     "/audio/songs/burninglovebycoldconnection.mp3", 
     "audio/songs/likeapinballbysplit.mp3", 
     "audio/songs/notfromthesunbycoolmowee.mp3", 
-    "audio/songs/waitinggamebyeeman.mp3",
-
+    "audio/songs/waitinggamebyeeman.mp3"
 ]
 
 const videoUrl = 
     [
         
         "video/songvideos/falseflagmusicvideo.mp4",
+        "video/songvideos/newnarcissimeckotrigger.mp4",
         "video/songvideos/burninglovemusicvideo.mp4",
         "video/songvideos/splitvisionlikeapinballmusicvideo.mp4",
         "video/songvideos/notfromthesunmusicvideo.mp4",
@@ -35,6 +36,7 @@ const videoUrl =
 const songTitles = 
 [
     "FALSE FLAG - ENTER.ME",
+    "NEW NARCISSIM ECKOTRIGGER",
     "BURNING LOVE - COLD CONNECTION",
     "LIKE A PINBALL - SPLIT VISION",
     "NOT FROM THE SUN - COOLMOWEE",
