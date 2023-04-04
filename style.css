@@ -439,13 +439,6 @@ intropageoverlay div img
 }
 
 
-
-
-
-
-
-
-
 .logo-wrapper 
 {
     width: 4rem;
@@ -455,7 +448,6 @@ intropageoverlay div img
 {
     max-width: 100%;
 }
-
 
 
 
@@ -546,6 +538,7 @@ animation: rotating 3s linear infinite;
   
 .vinyl-wrapper 
 {
+    overflow: hidden;
     align-items: center;
 
     
@@ -665,17 +658,48 @@ animation: rotating 3s linear infinite;
     {
         font-size: 80%;
     }
-
-    .vinyl-wrapper 
-    {
-        width: 20rem;
-    }
-
     .bottom-container > div:nth-child(2) 
     {
 
     }
 }
+
+@media only screen and (max-width: 500px) {
+
+    html 
+    {
+        font-size: 70%;
+    }
+    .bottom-container > div:nth-child(2) 
+    {
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    html 
+    {
+        font-size: 60%;
+    }
+    .bottom-container > div:nth-child(2) 
+    {
+
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    html 
+    {
+        font-size: 50%;
+    }
+    .bottom-container > div:nth-child(2) 
+    {
+
+    }
+}
+
 
 
    
