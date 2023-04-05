@@ -11,7 +11,7 @@ var vinylimage = document.getElementById("vinylimage");
 
 var playingText = document.getElementById("playing");
 
-var youtubeVideoplayer = document.getElementById("youtubevideotrack");
+var songvideoPlayer = document.getElementById("songvideoplayer");
 
 
 const songUrl = [
@@ -28,7 +28,7 @@ const videoUrl =
     [
         
         "video/songvideos/falseflagmusicvideo.mp4",
-        "https://www.youtube.com/watch?v=qqOpZSuXeXs",
+        "video/songvideos/newnarcissimeckotrigger.mp4",
         "video/songvideos/burninglovemusicvideo.mp4",
         "video/songvideos/splitvisionlikeapinballmusicvideo.mp4",
         "video/songvideos/notfromthesunmusicvideo.mp4",
@@ -45,17 +45,6 @@ const songTitles =
     "WAITING GAME - EEM:AN"
 ]
 
-const youtubeUrl = 
-[
-    "https://www.youtube.com/embed/4zshOu0yCyQ?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-    "https://www.youtube.com/embed/qqOpZSuXeXs?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-    "https://www.youtube.com/embed/G8S6duXu6ko?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-    "https://www.youtube.com/embed/_8pPhTx8_Lw?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-    "https://www.youtube.com/embed/m0z36k84Yog?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-    "https://www.youtube.com/embed/3jwetUj17ms?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
-
-
-]
 
 
 var index = 0;
@@ -83,7 +72,7 @@ function cycleSongs()
     console.log(index);
     songPlayer.src= songUrl[index];
 
-    youtubeVideoplayer.src = youtubeUrl[index];
+    songvideoPlayer.src = videoUrl[index];
 
     songPlayer.play();
 
