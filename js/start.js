@@ -11,7 +11,7 @@ function startPlay() {
 
 
     var c = document.getElementById("videotrackeffect1").play();
-    var d = document.getElementById("videotrackmusicvideo").play();
+    
     vinylAudio.play();
 
 

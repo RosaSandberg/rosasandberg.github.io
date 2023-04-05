@@ -5,11 +5,13 @@ var tapeRecorder =   document.getElementById("taperecorder");
 var songTitle = document.getElementById("songtitle");
 
 var songPlayer = document.getElementById("songtrack");
-var videoPlayer = document.getElementById("videotrackmusicvideo");
+
 
 var vinylimage = document.getElementById("vinylimage");
 
 var playingText = document.getElementById("playing");
+
+var youtubeVideoplayer = document.getElementById("youtubevideotrack");
 
 
 const songUrl = [
@@ -26,7 +28,7 @@ const videoUrl =
     [
         
         "video/songvideos/falseflagmusicvideo.mp4",
-        "video/songvideos/newnarcissimeckotrigger.mp4",
+        "https://www.youtube.com/watch?v=qqOpZSuXeXs",
         "video/songvideos/burninglovemusicvideo.mp4",
         "video/songvideos/splitvisionlikeapinballmusicvideo.mp4",
         "video/songvideos/notfromthesunmusicvideo.mp4",
@@ -41,6 +43,18 @@ const songTitles =
     "LIKE A PINBALL - SPLIT VISION",
     "NOT FROM THE SUN - COOLMOWEE",
     "WAITING GAME - EEM:AN"
+]
+
+const youtubeUrl = 
+[
+    "https://www.youtube.com/embed/4zshOu0yCyQ?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    "https://www.youtube.com/embed/qqOpZSuXeXs?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    "https://www.youtube.com/embed/G8S6duXu6ko?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    "https://www.youtube.com/embed/_8pPhTx8_Lw?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    "https://www.youtube.com/embed/m0z36k84Yog?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    "https://www.youtube.com/embed/3jwetUj17ms?controls=0rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+
+
 ]
 
 
@@ -68,10 +82,10 @@ function cycleSongs()
 
     console.log(index);
     songPlayer.src= songUrl[index];
-    videotrackmusicvideo.src= videoUrl[index];
+
+    youtubeVideoplayer.src = youtubeUrl[index];
 
     songPlayer.play();
-    videotrackmusicvideo.play();
 
 
     tapeRecorder.currentTime=0;
