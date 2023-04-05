@@ -396,7 +396,26 @@ intropageoverlay div img
 
 
 
+.yt-videocontainer 
+{
+    position: relative;
+    height: 100vh;
+    scale: 1.3;
+    z-index: -1;
+    filter: grayscale(0.6);
+    opacity: 0.8;
 
+}
+
+.yt-videocontainer iframe 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 
 
@@ -456,16 +475,54 @@ audio {height: 0; width: 0;}
 
 
 .video-container {
+
+ 
+
+  
+    position: relative;
+    z-index: -1;
     pointer-events: none;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%; 
+
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    scale: 1.4;
+  
+
+
+  }
+
+  .video-container iframe 
+  {
+ 
+
+
+  
+    
+  
+
+    width: 100vw;
+    min-height: 100%;
+   
+
+    z-index: 0;
+    bottom: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+           
   }
 
   
+  
+
 
 .video-container video 
 {
@@ -650,7 +707,24 @@ animation: rotating 3s linear infinite;
 
 
 
+@media only screen and (max-width: 1400px) {
 
+    html 
+    {
+        font-size: 80%;
+    }
+    .bottom-container > div:nth-child(2) 
+    {
+
+    }
+    .yt-videocontainer 
+    {
+
+        scale: 1.6;
+       
+
+    }
+}
 
 @media only screen and (max-width: 900px) {
 
@@ -660,6 +734,13 @@ animation: rotating 3s linear infinite;
     }
     .bottom-container > div:nth-child(2) 
     {
+
+    }
+    .yt-videocontainer 
+    {
+
+        scale: 2.4;
+       
 
     }
 }
@@ -672,6 +753,13 @@ animation: rotating 3s linear infinite;
     }
     .bottom-container > div:nth-child(2) 
     {
+
+    }
+    .yt-videocontainer 
+    {
+
+        scale: 3;
+       
 
     }
 }
