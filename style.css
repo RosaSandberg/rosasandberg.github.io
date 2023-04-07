@@ -253,8 +253,6 @@ intropageoverlay div img
     max-width: 100%;
 }
 
-
-
 .fade 
 {
     -webkit-animation: fade;
@@ -290,6 +288,12 @@ intropageoverlay div img
         -ms-transform: scale(1.2);
             transform: scale(1.2);
 
+}
+
+.container 
+{
+    pointer-events: none;
+    z-index: 1;
 }
 
 
@@ -395,30 +399,6 @@ intropageoverlay div img
 }
 
 
-
-.yt-videocontainer 
-{
-    position: relative;
-    height: 100vh;
-    scale: 1.3;
-    z-index: -1;
-    filter: grayscale(0.6);
-    opacity: 0.6;
-
-}
-
-.yt-videocontainer iframe 
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-
-
 .bottom-container .button-1 
 {
 
@@ -492,32 +472,6 @@ audio {height: 0; width: 0;}
 
   }
 
-  .video-container iframe 
-  {
- 
-
-
-  
-    
-  
-
-    width: 100vw;
-    min-height: 100%;
-   
-
-    z-index: 0;
-    bottom: 0;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-           
-  }
-
-  
   
 
 
@@ -538,22 +492,26 @@ audio {height: 0; width: 0;}
     -webkit-transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
-
 }
+
+.video-container > video:nth-child(1) 
+  {
+    opacity: 0.8;
+    z-index: -2;
+    filter: contrast(1.2) grayscale(0.7);
+  }
   .video-container > video:nth-child(2) 
   {
-    opacity: 0.025; -webkit-filter: brightness(3); filter: brightness(3);
+    z-index: 1;
+    opacity: 0.05; -webkit-filter: brightness(3); filter: brightness(3); 
+    mix-blend-mode: difference;
+
   }
-  .video-container > video:nth-child(3) 
-  {
-    opacity:0.01;
-  }
+
   .video-container > video:nth-child(3) 
   {
     z-index: -1;
-    opacity: 0.5;
-    -webkit-filter: contrast(1.1) grayscale(0.6);
-            filter: contrast(1.1) grayscale(0.6); 
+    opacity: 0.02;
   }
 
   @-webkit-keyframes rotating {
@@ -770,8 +728,8 @@ animation: rotating 3s linear infinite;
     {
 
     }
-    .yt-videocontainer 
-    {
+  
+}
 
 @media only screen and (max-width: 500px) {
 
@@ -814,5 +772,3 @@ animation: rotating 3s linear infinite;
 
    
   
-
-
