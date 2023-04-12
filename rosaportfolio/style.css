@@ -82,6 +82,38 @@ nav li a
     
 }
 
+.subpage-pagenav 
+{
+    position: absolute;
+    z-index: 200;
+    right: 0;
+    top: 50%;
+    line-height: 1.5rem;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+
+    box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+-webkit-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+
+    
+
+}
+
+.subpage-pagenav-fixed 
+{
+    transition: all ease-in-out 1s;
+    opacity: 1;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    margin: 1rem;
+}
+
 .subpage-wrapper 
 {
     width: 100vw;
@@ -93,6 +125,15 @@ nav li a
     margin-top: 10rem;
     margin-bottom: 10rem;
     
+}
+
+.anchor 
+{
+    display: block;
+    position: relative;
+    top: -30vh;
+    visibility:hidden;
+
 }
 
 .subpage-wrapper a
