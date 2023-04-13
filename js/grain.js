@@ -4,11 +4,12 @@ var viewWidth,
     ctx;
 
 // change these settings
-var patternSize = 50,
-    patternScaleX = 2,
-    patternScaleY = 2,
-    patternRefreshInterval = 3,
-    patternAlpha = 12; // int between 0 and 255,
+var patternSize = 80,
+    patternScaleX = 3,
+    patternScaleY = 1,
+    patternRefreshInterval = 4,
+    patternAlpha =20; // int between 0 and 255,
+
 
 var patternPixelDataLength = patternSize * patternSize * 4,
     patternCanvas,

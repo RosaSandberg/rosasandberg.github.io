@@ -14,6 +14,7 @@ var playingText = document.getElementById("playing");
 var songvideoPlayer = document.getElementById("songvideoplayer");
 
 
+/*
 const songUrl = [
 
     "audio/songs/falseflagbyenterme.mp3", 
@@ -23,29 +24,35 @@ const songUrl = [
     "audio/songs/notfromthesunbycoolmowee.mp3", 
     "audio/songs/waitinggamebyeeman.mp3"
 ]
+*/
 
 const videoUrl = 
     [
         
         "video/songvideos/falseflagmusicvideo.mp4",
         "video/songvideos/newnarcissimeckotrigger.mp4",
+        "video/songvideos/notfromthesunmusicvideo.mp4",
         "video/songvideos/burninglovemusicvideo.mp4",
         "video/songvideos/splitvisionlikeapinballmusicvideo.mp4",
-        "video/songvideos/notfromthesunmusicvideo.mp4",
-        "video/songvideos/waitinggamemusicvideo.mp4"
+
     ]
 
 const songTitles = 
 [
     "FALSE FLAG - ENTER.ME",
     "NEW NARCISSIM ECKOTRIGGER",
+    "NOT FROM THE SUN - COOLMOWEE",
     "BURNING LOVE - COLD CONNECTION",
     "LIKE A PINBALL - SPLIT VISION",
-    "NOT FROM THE SUN - COOLMOWEE",
-    "WAITING GAME - EEM:AN"
+
 ]
 
 
+function muteIntrosong() 
+{
+    songPlayer.pause();
+    console.debug("EXECUTED!")
+}
 
 var index = 0;
 
@@ -57,7 +64,7 @@ function cycleSongs()
     songTitle.classList.remove("fade");
     
     
-    if (index >= (songUrl.length -1)) 
+    if (index >= (videoUrl.length -1)) 
     {
         index = 0;
     } 
@@ -70,11 +77,11 @@ function cycleSongs()
 
 
     console.log(index);
-    songPlayer.src= songUrl[index];
+    //songPlayer.src= songUrl[index];
 
     songvideoPlayer.src = videoUrl[index];
 
-    songPlayer.play();
+    //songPlayer.play();
 
 
     tapeRecorder.currentTime=0;

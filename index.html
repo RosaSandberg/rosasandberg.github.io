@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Town and Towers - Spin It </title>
+    <title>Town and Towers - Jukebox </title>
     <meta name="description" content="Town and Towers jukebox offers an insight into our selection of synthpop songs">
     <meta name="keywords" content="town and towers, jukebox, radio, synthpop, synth, electronica, record label, indie, 80's, stig wintendorff">
     <meta name="author" content="Stig Wintendorff">
@@ -26,7 +26,7 @@
     <h1>town and towers synthpop jukebox</h1>
     <h2>listen to synthpop music in an interactive format</h2>
     <nav>
-        <div><a href="#"><img viewbox = "0 0 512 512" src="images/townandtowerslogo.svg" alt=""></a></div>
+        <div><a href="#"><img viewbox = "0 0 512 512" src="images/townandtowerslogo.svg" alt="townandtowerslogo"></a></div>
         <ul>
             <a href="https://open.spotify.com/user/5x45wism3yh5u4juozazs4cf7" id ="socialmediaicon" target=”_blank”><img src="images/spotify-negative-icon.png" alt="spotifyicon"></a>
             <a href="https://www.youtube.com/@townandtowersrecords758"id ="socialmediaicon" target=”_blank”><img src="images/youtube-negative-icon.png" alt="youtubeicon"></a>
@@ -37,7 +37,7 @@
     
     <div class="prepage-wrapper" id="prepage-wrapper-id">
         <div class="prepage" id ="prepage">
-            <img style="max-width: 12rem;" src="images/townandtowerslogotype.svg" alt="" srcset="">
+            <img style="max-width: 12rem;" src="images/townandtowerslogotype.svg" alt="townsandtowerslogotype" srcset="">
             <p class="letterspacing-1">Record Label and Music Management</p>
             <p class="bold" class="letterspacing-1">SPIN N' SHUFFLE THROUGH A SELECTION OF <br> OUR MOST POPULAR ARTISTS</p>
             <button class="button-1" onclick="startPlay()">START</button>
@@ -47,12 +47,12 @@
 
     <div class="mainpage" id="mainpage">
         <div class="bottom-container">
-            <div class="vinyl-wrapper" id="vinylwrapper" onclick="cycleSongs()">
+            <div class="vinyl-wrapper" id="vinylwrapper" onclick="cycleSongs(),  muteIntrosong()">
                 <img class= "rotating" src="images/vinylcutout.png" id="vinylimage" alt="">
             </div>
             <div>
                 <p id="playing" style="display: none" class="letterspacing-1"> <span class="bold"> NOW PLAYING: </span> <span id="songtitle">NOTHING</span> </p>
-                <button class="button-1" onclick="cycleSongs()"> SPIN?</button>
+                <button class="button-1" onclick="cycleSongs(), muteIntrosong()" > SPIN?</button>
 
             </div>
             <div>
@@ -81,7 +81,7 @@
 
 
 
-        <video  muted autoplay loop id="songvideoplayer" src="video/dancing.mp4" preload="auto">
+        <video  autoplay loop id="songvideoplayer" src="video/dancing.mp4" preload="auto">
 
         </video>
 
@@ -96,7 +96,7 @@
 
     </div>
     
-    <audio loop controls id="songtrack" src="audio/116-bpm-oldschool-electronica-18063.mp3">
+    <audio loop  id="songtrack" src="audio/116-bpm-oldschool-electronica-18063.mp3">
         Your browser does not support the audio element.
     </audio>
     <audio loop id="taperecorder" >
