@@ -1,3 +1,7 @@
+:root 
+{
+    --main: #aa8964 ;
+}
 *
 {
     margin: 0;
@@ -11,8 +15,27 @@
     overflow-x: hidden;
 }
 
+button 
+{
+    cursor: pointer;
+    background-color: var(--main);
+    color: white;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: none;
+}
+
+p 
+{
+    line-height: 1.5rem;
+}
+
+
 nav 
 {
+    opacity: 0;
+    animation: fadeIn 0.7s ;
+    animation-fill-mode: forwards;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,13 +46,48 @@ nav
     align-items: center;
     position: fixed;
     width: 100%;
-    background-color: #aa8964;
+    background-color: var(--main);
     color: white;
     z-index: 5;
+    box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeIn2 {
+	0% {
+		opacity: 0;
+		transform: scale3d(2, 2, 2);
+        transform: rotate3d(0, 90deg, 0);
+        
+        
+	}
+	100% {
+		opacity: 1;
+		transform: scale3d(1.0, 1, 1);
+        transform: rotate3d(0, 0deg, 0);
+	}
+
+
 }
 nav > a:nth-child(1) 
 {
-    width: 5rem;
+    opacity: 0;
+    animation-delay: 0.7s;
+    animation: fadeIn 0.7s ;
+    animation-fill-mode: forwards;
+    width: 4rem;
     color: white;
     filter: invert(1);
 }
@@ -40,6 +98,10 @@ nav a:nth-child(1) > img
 
 nav div:nth-child(2) 
 {
+    opacity: 0;
+    animation-delay: 0.7s;
+    animation: fadeIn 0.7s ;
+    animation-fill-mode: forwards;
     display: inline-flex;
 }
 
@@ -51,7 +113,7 @@ nav li
 
 nav li a 
 {
-    color: white;
+    color: whitesmoke;
 }
 
 
@@ -59,6 +121,15 @@ nav li a
 #active-page 
 {
     font-weight: bold;
+}
+
+
+@keyframes changecolor 
+{
+    0% {color: black!important;}
+    25% {color: #314241!important;}
+    50% {color: #aa8964!important;}
+    100% {color: brown!important;}
 }
 
 .mainwrapper 
@@ -77,9 +148,25 @@ nav li a
     text-align: center;
 }
 
-.mainwrapper-h4 > p
+.mainwrapper-h4 > div
+{   
+    margin-bottom: 2rem;
+}
+
+.pattern 
 {
-    
+    animation-name: fadeIn2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-direction: alterernate;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+
+ 
 }
 
 .subpage-pagenav 
@@ -99,6 +186,13 @@ nav li a
     box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
 -webkit-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
 -moz-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.15);
+
+background: repeating-linear-gradient(
+    45deg,
+    #0f084b56 1px,
+    #06031444 1px,
+    #ffffff1c 1px,
+    #ffffff17 1px)
 
     
 
@@ -145,8 +239,9 @@ nav li a
 {
     background-image: url(images/townandtowersheroimage.jpg);
     background-size: cover;
+    background-position: center center center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
 }
 
@@ -159,10 +254,12 @@ nav li a
 .subpage-wrapper > h3 
 {
     padding-bottom: 5rem;
+    color: var(--main);
 }
 
 .subpage-wrapper h4 
 {
+    color: var(--main);
     padding-bottom: 0.5rem;
 }
 
