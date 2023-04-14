@@ -173,8 +173,6 @@ a:hover
     bottom: 0;
     width: 100vw;
     height: 100vh;
-
- 
 }
 
 .subpage-pagenav 
@@ -248,7 +246,7 @@ background: repeating-linear-gradient(
 {
     background-image: url(images/townandtowersheroimage.jpg);
     background-size: cover;
-    background-position: center center center;
+    background-position: center;
     background-attachment: fixed;
     height: 70vh;
     width: 100vw;
@@ -257,7 +255,7 @@ background: repeating-linear-gradient(
 
 .subpage-wrapper-section 
 {
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
 }
 
 .subpage-wrapper > h3 
@@ -308,4 +306,61 @@ sup
     vertical-align: super;
     font-weight: bold;
     color: #aa8964;
+}
+
+@media only screen and (max-width: 1600px) {
+
+
+    .subpage-wrapper 
+    {   
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+    .subpage-wrapper 
+    {   
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 800px) {
+
+
+    .subpage-wrapper 
+    {   
+        
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .subpage-pagenav 
+    {
+        display: none!important;
+    }
+
+    
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    .subpage-wrapper 
+    {   
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .subpage-pagenav 
+    {
+        display: none!important;
+    }
+
+    
 }
