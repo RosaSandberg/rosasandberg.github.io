@@ -113,8 +113,16 @@ nav li
 
 nav li a 
 {
-    color: whitesmoke;
+    color: white;
 }
+
+a:hover 
+{
+    transition: all 0.1s ease;
+    transform: scale(1.05);
+}
+
+
 
 
 
@@ -233,6 +241,7 @@ background: repeating-linear-gradient(
 .subpage-wrapper a
 {
     color: blue;
+    font-style: italic;
 }
 
 .subpage-hero 
@@ -248,7 +257,7 @@ background: repeating-linear-gradient(
 
 .subpage-wrapper-section 
 {
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
 }
 
 .subpage-wrapper > h3 
