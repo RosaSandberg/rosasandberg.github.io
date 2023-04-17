@@ -4,42 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Rosa Frederikke Oppermann Sandberg</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <title>Town and Towers - Jukebox </title>
+    <meta name="description" content="Town and Towers jukebox offers an insight into our selection of synthpop songs">
+    <meta name="keywords" content="town and towers, jukebox, radio, synthpop, synth, electronica, record label, indie, 80's, stig wintendorff">
+    <meta name="author" content="Stig Wintendorff">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">    
 </head>
+
 <body>
-
- 
+    <h1>town and towers synthpop jukebox</h1>
+    <h2>listen to synthpop music in an interactive format</h2>
     <nav>
-        <a href="index.html"> 
-            <img src="images/signatur.png" alt="" srcset="">
-        </a>   
-        <div>
-            <li><a id="active-page" href="#">Hovedside</a></li>
-            <li><a href="om.html">Om</a></li>
-            <li><a href="h4.html">H4</a></li>
+        <div><a href="#"><img viewbox = "0 0 512 512" src="images/townandtowerslogo.svg" alt="townandtowerslogo"></a></div>
+        <ul>
+            <a href="https://open.spotify.com/user/5x45wism3yh5u4juozazs4cf7" id ="socialmediaicon" target=”_blank”><img src="images/spotify-negative-icon.png" alt="spotifyicon"></a>
+            <a href="https://www.youtube.com/@townandtowersrecords758"id ="socialmediaicon" target=”_blank”><img src="images/youtube-negative-icon.png" alt="youtubeicon"></a>
+            <a href="https://www.facebook.com/townandtowers.dk" id ="socialmediaicon"target=”_blank”><img src="images/facebook-negative-icon.png" alt="facebookicon"></a>
+            <a href="https://www.instagram.com/town_and_towers_records/" id ="socialmediaicon"target=”_blank”><img src="images/instagram-negative-icon.png" alt="instagramicon"></a>
+        </ul>
+    </nav> 
+    
+    <div class="prepage-wrapper" id="prepage-wrapper-id">
+        <div class="prepage" id ="prepage">
+            <img style="max-width: 12rem;" src="images/townandtowerslogotype.svg" alt="townsandtowerslogotype" srcset="">
+            <p class="letterspacing-1">Record Label and Music Management</p>
+            <p class="bold" class="letterspacing-1">SPIN N' SHUFFLE THROUGH A SELECTION OF <br> OUR MOST POPULAR ARTISTS IN OUR DIGITAL JUKEBOX</p>
+            <button class="button-1" onclick="startPlay()">START</button>
+            <a href="#">(or take me to the main site..)</a>  
         </div>
-        
-    </nav>
-
-    <div class="mainwrapper-h4">
-        <h1 style="animation-name: fadeIn; animation-delay: 0.5s; animation-duration: 1s; opacity: 0; animation-fill-mode: forwards;"> <strong>Hej!</strong></h1>
-        <h2 style="animation-name: fadeIn; animation-delay: 1s; animation-duration: 1s; opacity: 0; animation-fill-mode: forwards;">Velkommen til mit <strong>digitale</strong> portfolie. <br>Klik på menuen i toppen for at komme videre
-        </h2>
     </div>
-    <div class="pattern"></div>
+
+    <div class="mainpage" id="mainpage">
+        <div class="bottom-container">
+            <div class="vinyl-wrapper" id="vinylwrapper" onclick="cycleSongs(),  muteIntrosong()">
+                <img class= "rotating" src="images/vinylcutout.png" id="vinylimage" alt="">
+            </div>
+            <div>
+                <p id="playing" style="display: none" class="letterspacing-1"> <span class="bold"> NOW PLAYING: </span> <span id="songtitle">NOTHING</span> </p>
+                <button class="button-1" onclick="cycleSongs(), muteIntrosong()" > SPIN?</button>
+
+            </div>
+            <div>
+                <a class="logotype-wrapper">
+                    <img src="images/townandtowerslogotype.svg" alt="townsandtowerslogotype">
+                </a>
+                <p class="letterspacing-1">Record Label and Music Management</p>
+            </div>   
+
+        </div> 
+
+        
+
+       
+
+        <div id="container">
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
     
+
     
+
+    <div class="video-container">
+
+
+
+        <video  autoplay loop id="songvideoplayer" src="video/dancing.mp4" preload="auto">
+
+        </video>
+
+
+       
+        <video muted autoplay loop class="video" id="videotrackeffect1">
+            <source src="video/vhseffect-2.mp4" type="video/mp4">
+        </video>    
+        <video muted autoplay loop class="video" id="videotrackeffect2">
+            <source src="video/vhseffect.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    
+    <audio loop  id="songtrack" src="audio/116-bpm-oldschool-electronica-18063.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio loop id="taperecorder" >
+        <source src="audio/projecter.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio loop id="vinylaudio">
+        <source src="audio/vinyl-effect-loop-110210.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
 </body>
+<!--<script src="js/grain.js" type="text/javascript"></script>-->
+
+
+
+<script src="js/grain.js"></script>
+<script src="js/randomsong.js"></script>
+<script src="js/setvolume.js"></script>
+<script src="js/start.js"></script>
+<script src="js/changesong.js"></script>
+
 </html>
