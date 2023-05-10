@@ -5,6 +5,9 @@ function startPlay() {
     var b = document.getElementById("songtrack").play();
     b.autoplay = true;
 
+    var svp = document.getElementById("songvideoplayer");
+    svp.play();
+
     var vinylAudio = document.getElementById("vinylaudio"); 
     vinylAudio.autoplay = true;
     
