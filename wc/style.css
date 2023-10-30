@@ -31,7 +31,8 @@
 
 body 
 {
-    font-size: 100%;
+    text-wrap: balance;
+
     background-color: var(--paperwhite);
     color: var(--richblack);
     transition: all 0.2 ease;
@@ -132,6 +133,7 @@ section > div > img
     height: 90vh;
     overflow: hidden;
     z-index: 1;
+    width: 100%;
     
 }
 .overlay 
@@ -147,11 +149,18 @@ section > div > img
 
 video 
 {
+    min-height: 100%;
 
+}
+
+p 
+{
+    font-size: 1rem;
 }
   
 h1 
 {
+    height: auto;
     position: absolute;
     z-index: 500;
     font-size: 4rem;
@@ -190,42 +199,94 @@ p
 }
 
 
-@media (max-width: 1000px) {
+
+
+
+@media only screen and (max-width: 4000px) {
+    html 
+    {
+        font-size: 16;
+    }
+    /* … */
+  }
+
+  @media only screen and (max-width: 1000px) {
+    html 
+    {
+        font-size: 15px;
+    }
     h1 
     {
         font-size: 4rem;
     }
-    html 
-    {
-        font-size: 90%;
-    }
+    
     /* … */
   }
 
-
-  @media (max-width: 600px) {
-
+  @media only screen and (max-width: 600px) {
     :root 
     {
         --margin: 6%;
     }
-    h1 
-    {
-        font-size: 3rem;
-    }
     html 
     {
-        font-size: 80%;
+        font-size: 14px;
+    }
+    h1 
+    {
+        padding-right: var(--margin);
+        font-size: 2.5rem;
     }
 
     section 
     {
+        margin-top: var(--margin);
+        margin-bottom: var(--margin);
+        gap: 2rem;
         flex-wrap: wrap;
     }
+
     section > div 
     {
-        padding-bottom: 1rem;
         width: unset;
     }
+    
+    
     /* … */
   }
+
+  @media only screen and (max-width: 300px) {
+    :root 
+    {
+        --margin: 3%;
+    }
+    html 
+    {
+        font-size: 12px;
+    }
+    h1 
+    {
+        padding-right: var(--margin);
+        
+    }
+
+    section 
+    {
+        margin-top: var(--margin);
+        margin-bottom: var(--margin);
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    section > div 
+    {
+        width: unset;
+    }
+    
+    
+    /* … */
+  }
+
+ 
+
+
