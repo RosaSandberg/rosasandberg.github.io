@@ -13,7 +13,7 @@
 {
     --paperwhite: #FCFCFD;
     --richblack: #101118;
-    --margin: 12%;
+    --margin: 5%;
 }
 
 .fadein 
@@ -101,10 +101,18 @@ a {
     transform-origin: bottom left;
   }
 
+
+image 
+{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
 section 
 {
-    margin-top: calc(var(--margin)*0,75);
-    margin-bottom: calc(var(--margin)*0,75);
+    margin-top: calc(var(--margin)*1.25);
+    margin-bottom: calc(var(--margin)*1.25);
     padding: var(--margin);
     gap: var(--margin);
     display: flex;
@@ -124,12 +132,34 @@ section > div > img
     
 }
 
+.quotesection > div 
+{
+    width: unset;
+}
+
+.quotesection div:nth-child(1)
+{
+
+}
+
+.quotesection div:nth-child(2)
+{
+    padding-right: calc(var(--margin)*5);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+
+
+
+
 .videowrapper 
 {
  
     position: relative;
     top: 0;
     left: 0;
+    height: 90svh;
     height: 90vh;
     overflow: hidden;
     z-index: 1;
@@ -149,7 +179,9 @@ section > div > img
 
 video 
 {
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
 }
 
@@ -160,35 +192,39 @@ p
   
 h1 
 {
+    text-transform: capitalize;
     height: auto;
     position: absolute;
     z-index: 500;
-    font-size: 4rem;
+    font-size: 8rem;
     color: white;
     padding-left: var(--margin);
     padding-right: 25%;
-    padding-bottom: 5%;
+    padding-bottom: 3rem;
     position: absolute;
     bottom: 0;
     font-weight: 700;
     line-height: 110%;
+    font-weight: 600;
 }
 
 h2 
 {
-    font-size: 1.85rem;
-    font-weight: 700;
+    
+    font-size: 3.5rem;
+    font-weight: 100;
     padding-bottom: 2rem;
+    line-height: 110%;
 }
-h2, h3, h4, h5 
+h1, h2, h3, h4, h5 
 {
-   
+    font-family: "neue-haas-grotesk-display", sans-serif;
 
 }
 h4 
 {
     font-family: "neue-haas-grotesk-text", sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 1.1rem;
     line-height: 150%;
 }
@@ -223,10 +259,10 @@ p
     /* … */
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     :root 
     {
-        --margin: 6%;
+        --margin: 8%;
     }
     html 
     {
@@ -235,8 +271,45 @@ p
     h1 
     {
         padding-right: var(--margin);
-        font-size: 2.5rem;
+        
     }
+
+    section 
+    {
+        margin-top: var(--margin);
+        margin-bottom: var(--margin);
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    section > div 
+    {
+        width: unset;
+    }
+
+    .quotesection div:nth-child(2)
+    {
+        padding-right: unset;
+        padding-top: unset;
+        padding-bottom: unset;
+    }
+    
+    
+    /* … */
+  }
+
+  @media only screen and (max-width: 600px) {
+    :root 
+    {
+        --margin: 6%;
+    }
+
+    h2 
+    {
+        font-size: 3rem;
+
+    }
+
 
     section 
     {
