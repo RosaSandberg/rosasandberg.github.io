@@ -16,7 +16,7 @@
 {
     --onyxblack: #29292d;
     --wavemist: #E6E6F2;
-    --coolgray: rgb(80, 80, 91);
+    --coolgray: #50505b;
     --electricpurple: #5C59E0;
 
 
@@ -46,9 +46,9 @@
 
 .success 
 {
-    background-color: #e6e6f288;
-    
+    color:hsla(240, 6%, 34%, 0.575)!important;
 }
+
 
 #onyxblack{background-color: var(--onyxblack);}
 #coolgray{background-color: var(--coolgray);}
@@ -340,13 +340,13 @@ section .contentdescription
 {
     
     padding: 5px;
-    background-color: var(--wavemist);
+    color: var(--onyxblack);
+    
     
 }
 
 #copy:hover 
 {
-    background-color: #e6e6f288;
     cursor: pointer;
     transition: all 0.2s var(--bezier);
 }

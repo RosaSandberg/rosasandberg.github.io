@@ -277,15 +277,18 @@
                 _text = _this.textContent;
                 navigator.clipboard.writeText(_text);
                 _initial = _text;
-                _this.textContent = 'copied';
-                _this.classList.add("success");
 
-                console.log(_text);        
+                _finished =false;
+                _this.classList.add("success");
+                    _this.textContent = 'Copied' ;
+
+  
 
                 setTimeout(function() {
                     console.log(_initial, _text);
                     _this.textContent = _initial;
                     _this.classList.remove("success");
+                    _finished = true;
                     
                 //your code to be executed after 1 second
                 }, 400);
@@ -296,19 +299,7 @@
             else {return;}
         }
 
-        function succes() {
-            var _initial = _text;
-
-            _finished = false;
-            _text = "Copied!";
-
-            setTimeout(function(){
-            
-            }, 200);
-            _text = _initial;
-            _finished = true;
-        }
-
+        
         
         
 
