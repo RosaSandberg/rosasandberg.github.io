@@ -26,6 +26,8 @@
     --electricpurple2: #8987FF;
     --electricpurple1: #B6B5FF;
 
+    --succesgreen: #59e0a6;
+
 
     --max-width: 1090px; 
 
@@ -42,7 +44,10 @@
 
 
 
-
+.success 
+{
+    color: var(--succesgreen);
+}
 
 #onyxblack{background-color: var(--onyxblack);}
 #coolgray{background-color: var(--coolgray);}
@@ -70,13 +75,13 @@ body
 .selectable 
 {
     cursor: pointer;
-    transition: all 0.4s var(--bezier-ease);
+    transition: all 0.2s var(--bezier-ease);
 
 }
 
 .selectable:hover 
 {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 
@@ -111,7 +116,8 @@ body
 /* TYPOGRAPHY */
 h1
 {
-    font-weight: var(--roboto-black);
+    font-weight: var(--roboto-bold);
+    font-size: 18px;
 
 }
 h3
@@ -122,7 +128,7 @@ h3
 h4
 {
     font-weight: var(--roboto-bold);
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;  
 }
 
@@ -131,7 +137,13 @@ h4
 p, a, small 
 {
     font-weight: var(--roboto-regular);
-    font-size: 16px;
+    font-size: 14px;
+}
+
+sup
+{
+    vertical-align: middle;
+
 }
 
 
@@ -199,7 +211,7 @@ header a img
     opacity: 0;
     animation-name: display;
     animation-duration: 2s;
-    animation-delay: 3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 
 
@@ -218,7 +230,7 @@ header a img
 {
     transform: translate3d(0, -80px, 0);
     animation: slidein 1s;
-    animation-delay: 2.5s;
+    animation-delay: 0.7s;
     animation-fill-mode: forwards;
 }
 
@@ -242,6 +254,8 @@ header a img
 
 /* body  */
 
+
+
 main 
 {
     animation: 2s var(--bezier) slidein;
@@ -254,8 +268,8 @@ main
     padding: 10px;
     gap: var(--flexgap); 
     margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .main-child 
@@ -278,13 +292,13 @@ main
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: calc(var(--flexgap)*4);
+    gap: calc(var(--flexgap)*2);
     justify-content: center;
     align-items: center;
     max-width: var(--max-width);
     width: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     border-top: 1px solid #29292d10;
     border-bottom: 1px solid #29292d10;
 }
@@ -297,8 +311,10 @@ section .content
 
 .content img 
 {
-    width: 240px;
+    width: 140px;
 }
+
+
 
 section .contentdescription 
 {   
@@ -323,15 +339,28 @@ section .contentdescription
 {
     
     padding: 5px;
-    background-color:#29292d05;
+    
 }
 
 .circle 
 {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
+}
+
+
+.four 
+{
+    gap: 0;
+    row-gap: calc(var(--flexgap)*4);  
+}
+
+
+.four > div 
+{
+    flex: 1 0 25%;
 }
 
 
