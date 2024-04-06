@@ -46,7 +46,8 @@
 
 .success 
 {
-    color: var(--succesgreen);
+    background-color: #e6e6f288;
+    
 }
 
 #onyxblack{background-color: var(--onyxblack);}
@@ -339,7 +340,15 @@ section .contentdescription
 {
     
     padding: 5px;
+    background-color: var(--wavemist);
     
+}
+
+#copy:hover 
+{
+    background-color: #e6e6f288;
+    cursor: pointer;
+    transition: all 0.2s var(--bezier);
 }
 
 .circle 
@@ -348,6 +357,12 @@ section .contentdescription
     width: 80px;
     height: 80px;
     display: inline-block;
+}
+
+.overridesize-1 
+{
+    width: 240px!important;
+    height: auto!important;
 }
 
 

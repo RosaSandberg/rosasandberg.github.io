@@ -42,7 +42,7 @@
                         
                         <div class="contentdescription">
                             <h4>onyx black</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#29292D</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#29292D</p>
                         </div>
                     </div>
 
@@ -53,7 +53,7 @@
                         
                         <div class="contentdescription">
                             <h4>coolgray</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#50505B</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#50505B</p>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                         
                         <div class="contentdescription">
                             <h4>wave mist</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#E6E6F2</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#E6E6F2</p>
                         </div>
                     </div>  
 
@@ -75,7 +75,7 @@
                         
                         <div class="contentdescription">
                             <h4>Electric Purple</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#5C59E0</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#5C59E0</p>
                         </div>
                     </div>  
 
@@ -92,7 +92,7 @@
                         
                         <div class="contentdescription">
                             <h4>Electric Purple 100</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#B6B5FF</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#B6B5FF</p>
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
                         
                         <div class="contentdescription">
                             <h4>Electric Purple 300</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#8987FF</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#8987FF</p>
                         </div>
                     </div>
 
@@ -115,7 +115,7 @@
                         
                         <div class="contentdescription">
                             <h4>Electric Purple 700</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#4543A8</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#4543A8</p>
                         </div>
                     </div>  
 
@@ -126,7 +126,7 @@
                         
                         <div class="contentdescription">
                             <h4>Electric Purple 900</h4>
-                            <p class="selectable" onclick="myFunction(this)" id="copy">#32307A</p>
+                            <p class="" onclick="myFunction(this)" id="copy">#32307A</p>
                         </div>
                     </div>  
 
@@ -236,6 +236,23 @@
                     
                 </div>
             </section>
+
+            <section>
+                <h1>WaveCrest Fonts</h1>
+                <div class="contents-wrapper">
+                    <div> 
+                        <div class="content" >
+                            <a download="roboto" href="misc/roboto.zip"><img src="images/roboto.png " class="selectable eighty overridesize-1 "></a>
+                        </div>
+                    </div>
+                    <div> 
+                        <div class="content" >
+                            <a download="roboto" href="misc/roboto.zip"><img src="images/playfairdisplay.png " class="selectable eighty overridesize-1 "></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
             
 
             
@@ -260,7 +277,7 @@
                 _text = _this.textContent;
                 navigator.clipboard.writeText(_text);
                 _initial = _text;
-                _this.textContent = 'copied!';
+                _this.textContent = 'copied';
                 _this.classList.add("success");
 
                 console.log(_text);        
@@ -271,7 +288,7 @@
                     _this.classList.remove("success");
                     
                 //your code to be executed after 1 second
-                }, 800);
+                }, 400);
                 
                
                 
@@ -287,7 +304,7 @@
 
             setTimeout(function(){
             
-            }, 1000);
+            }, 200);
             _text = _initial;
             _finished = true;
         }
