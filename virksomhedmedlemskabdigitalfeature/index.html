@@ -14,12 +14,13 @@
 
     <div class="certification-feature-main">
         <div class="certification-feature-inner">
-            <h1 class="certification-feature-title">
-                Sådan fungerer Certificéring af din virksomhed
-            </h1>
+            
             <figure class="certification-feature-logowrapper">
                 <img class="certification-feature-logo" src="images/regnbue certifikat4.png" alt="">
             </figure>
+            <h1 class="certification-feature-title">
+                Sådan fungerer Certificéring af din virksomhed
+            </h1>
             <p class="certification-feature-text">
                 Som medlemsvirksomhed får I mulighed for at vise omverdenen, at I målrettet arbejder for et trygt og inkluderende arbejdsmiljø. En LGBT+ certificering er et logo, som I har mulighed for at benytte på virksomhedens hjemmeside, i mailsignaturer mv. Bag logoet ligger nogle krav til konkrete indsatser, som virksomheden skal leve op til, for at kunne bruge logoet – alt sammen indsatser, som vi hos LGBT+ Danmark hjælper jer med at implementere. Bliv klogere på hvad de forskellige certifikater kræver, og hvad de betyder her.
             </p>
@@ -34,34 +35,34 @@
         document.addEventListener("DOMContentLoaded", function () {
     const steps = [
         {
-            title: "LGBT+ certificer jeres virksomhed eller organisation",
+            title: "Sådan fungerer certifikationen",
             imgSrc: "images/regnbue certifikat4.png",
-            buttonText: "Begynd",
-            text: "Som medlemsvirksomhed får I mulighed for at vise omverdenen, at I målrettet arbejder for et trygt og inkluderende arbejdsmiljø. Det kan være et vigtigt signal at sende, når man gerne vil finde frem til de rigtige talenter. En LGBT+ certificering er et logo, som I har mulighed for at benytte på virksomhedens hjemmeside, i mailsignaturer mv. Bag logoet ligger nogle krav til konkrete indsatser, som virksomheden skal leve op til, for at kunne bruge logoet – alt sammen indsatser, som vi hos LGBT+ Danmark hjælper jer med at implementere. Bliv klogere på hvad de forskellige certifikater kræver, og hvad de betyder ved at klikke start."
+            buttonText: "Start \u2192",
+            text: "Virksomhedscertifikatet kan have signalværdi for både nuværende medarbejdere, fremtidig personale/talenter eller for investore. Det viser at I har taget aktiv stilling til at inkludere LGBT+ borgere. Her kan du blive klogere på hvad de forskellige kriterier er for de forskellige niveauer af regnebuecertifikatet. Klik start for at se mere."
         },
         {
             title: "Første trin",
             imgSrc: "images/regnbuecertifikat.png",
-            buttonText: "Næste",
-            text: "Her gennemgår vi de mest grundlæggende krav for certificering. eks; synligt placeret LGBT+ oplysning til medarbejdere (fx plakater, flyers) og deltagelse ved LGBT+ netværksarrangementer."
+            buttonText: "Næste \u2192",
+            text: "I det første trin gennemgår vi de mest grundlæggende krav for certificering. eks; synligt placeret LGBT+ oplysning til medarbejdere (fx plakater, flyers) og deltagelse ved LGBT+ netværksarrangementer."
         },
         {
             title: "Andet trin",
             imgSrc: "images/regnbue certifikat2.png",
-            buttonText: "Næste",
-            text: "I dette trin bliver der taget konkrete tiltag for medarbejdernes trivsel og direkte inklusion. eks; implementering af en inkluderende personalepolitik, kønsneutrale toiletter, et Internt mangfoldighedsnetværk."
+            buttonText: "Næste \u2192",
+            text: "I det andet trin bliver der taget konkrete tiltag for medarbejdernes trivsel og direkte inklusion. eks; implementering af en inkluderende personalepolitik, kønsneutrale toiletter, et Internt mangfoldighedsnetværk."
         },
         {
             title: "Tredje trin",
             imgSrc: "images/regnbue certifikat3.png",
-            buttonText: "Næste",
-            text: "I dette trin er der i høj grad fokus på opkvalificering af medarbejderstaben, og klæde dem på til at være mere inklusive."
+            buttonText: "Næste \u2192",
+            text: "I det tredje trin er der i høj grad fokus på opkvalificering af medarbejderstaben, og klæde dem på til at være mere inklusive."
         },
         {
-            title: "Det sidste trin - fuld certificering",
+            title: "Den fulde certificering",
             imgSrc: "images/regnbue certifikat4.png",
-            buttonText: "Start forfra?",
-            text: "I er nu nået i mål med de øvrige trin og har derudover et årligt sparringsmøde med LGBT+ Danmark.",
+            buttonText: "Start forfra? \u21bb",
+            text: "I er nu nået i mål med de øvrige trin. I det fulde trin og certifikat har i derudover et årligt sparringsmøde med LGBT+ Danmark.",
             celebration: true
         }
     ];
@@ -74,10 +75,10 @@
     const text = document.querySelector(".certification-feature-text");
     const mainContainer = document.querySelector(".certification-feature-main");
 
-    function applyAnimation(element) {
-        element.classList.remove("fade-in");
-        void element.offsetWidth;
-        element.classList.add("fade-in");
+    function applyAnimation(element, animationClass) {
+    element.classList.remove(animationClass);
+    void element.offsetWidth; // Tvinger reflow, så animationen kan genstartes
+    element.classList.add(animationClass);
     }
 
     function createConfetti() {
@@ -113,21 +114,26 @@
 }
 
 
-    function updateStep() {
-        const step = steps[currentStep];
-        title.textContent = step.title;
-        image.src = step.imgSrc;
-        button.textContent = step.buttonText;
-        text.textContent = step.text;
+function updateStep() {
+    const step = steps[currentStep];
+    title.textContent = step.title;
+    image.src = step.imgSrc;
+    button.textContent = step.buttonText;
+    text.textContent = step.text;
 
-        if (step.celebration) {
-            createConfetti();
-        }
-
-        applyAnimation(title);
-        applyAnimation(image);
-        applyAnimation(text);
+    if (step.celebration) {
+        createConfetti();
     }
+
+    applyAnimation(title, "fade-in");
+    applyAnimation(text, "fade-in");
+
+    // Undgå pop-in hvis vi starter forfra (currentStep == 0)
+    if (currentStep !== 0) {
+        applyAnimation(image, "pop-in");
+    }
+}
+
 
     button.addEventListener("click", function () {
         if (currentStep < steps.length - 1) {
