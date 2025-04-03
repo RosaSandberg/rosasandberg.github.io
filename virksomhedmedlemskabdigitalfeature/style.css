@@ -1,0 +1,93 @@
+* {
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: black;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0!important;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.certification-feature-main {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.certification-feature-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.certification-feature-text {
+    box-shadow: rgba(100, 100, 111, 0.05) 0px 7px 29px 0px;
+    background: white;
+    border-radius: 5px;
+    padding: 2rem;
+    color: black;
+}
+
+.certification-feature-title {
+    font-size: 32px;
+    font-family: ITC Century Std,serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+.certification-feature-logo {
+    max-width: 260px;
+
+}
+.certification-feature-main button {
+    border: none;
+    background: #f0f;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+    animation: buttonloop alternate infinite;
+    animation-duration: 1s;
+}
+
+@keyframes buttonloop {
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
+}
+
+.certification-feature-main button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@keyframes rainbow {
+    0% {
+      background-size: 200% 200%;
+    }
+    50% {
+      background-size: 300% 300%;
+    }
+    100% {
+      background-size: 200% 200%;
+    }
+  }
